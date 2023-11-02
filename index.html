@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="src/main.ts" defer></script>
+  </head>
+  <body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#C2E9FB] to-[#A1C4FD]">
+
+    <div class="py-8 px-10 bg-white shadow-lg rounded-md text-black flex flex-col items-center justify-between">
+      
+      <div id="screen1" class="flex flex-col items-center justify-center gap-6">
+        <div class="space-y-2">
+          <h1 class="text-2xl font-semibold text-center">Jogo da Adivinhação</h1>
+          <p class="text-sm opacity-75 font-normal text-center">
+            Adivinhe o número entre 0 e 10
+          </p>
+        </div>
+        <form class="bg-zinc-200 flex items-center justify-center rounded-md overflow-hidden">
+          <div class="w-14 h-10 flex items-center justify-center bg-secondary text-black">
+            <input 
+              id="input" 
+              class="bg-transparent h-full w-full pl-5 focus:outline-none placeholder:pl-1" 
+              onkeydown="return false"  
+              placeholder="X" 
+              type="number" 
+              min="1" 
+              max="10" 
+            />
+          </div>
+          <button 
+            onclick="handleClick(event)"
+            class="h-10 px-6 flex items-center justify-center bg-primary hover:bg-[#6A6BD8] transition-all text-white"
+          >
+            Tentar
+          </button>
+        </form>
+      </div>
+
+      <div id="screen2" class="hidden">
+        <div class="flex flex-col items-center justify-center gap-4">
+          <h1 class="text-xl font-semibold">Quantidade de acertos X</h1>
+          <button class="bg-primary text-white px-6 py-3 scale-90 rounded-md font-medium" type="button">
+            Jogar Novamente
+          </button>
+        </div>
+      </div>
+      
+      <div id="logos" class="flex gap-4 scale-75 mt-6">
+        <script type="module" src="src/logos.ts" defer></script>
+      </div>
+    </div>
+
+  
+
+  </body>
+</html>

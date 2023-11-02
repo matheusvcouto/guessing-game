@@ -1,1 +1,3 @@
-# guessing-game / Jogo da Advinhação
+## Jogo da Advinhação / guessing-game
+
+![img da aplicação](src/img/img.png)
